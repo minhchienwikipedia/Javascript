@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>DOM CSS trong Javascript</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<script language="javascript">
+		function change_background() {
+			document.getElementById("message").style.background ='red';
+
+		}
+		function change_color() {
+			document.getElementById("message").style.color = 'red';
+
+		}
+		function change_height() {
+			document.getElementById("message").style.height = '100px';
+		}
+		function change_font_size() {
+			document.getElementById("message").style.fontSize = '50px';
+		}
+		// ===============================
+
+		function validate() {
+			var username = document.getElementById("username").value;
+			var password = document.getElementById("password").value;
+			// lấy đối tượng
+			var message = document.getElementById("message2")
+
+			if(username=="" || password==""){
+				message.innerHTML = "Bạn chưa nhập đủ thông tin";
+				message.style.color = 'red'
+			}else{
+				message.innerHTML = "Chúc mừng bạn đã đăng kí thành công";
+				message.style.color = 'blue'
+			}
+		}
+	</script>
+	<div id="message">
+          Chào mừng các bạn đến với website
+        </div>
+	<input type="button" value="Change background" onclick="change_background()"/>
+    <input type="button" value="Change color" onclick="change_color()"/>
+    <input type="button" value="Change height" onclick="change_height()"/>
+    <input type="button" value="Change fontsize" onclick="change_font_size()"/>
+
+    <hr>
+
+    Username: <input type="text" name="" id="username">
+    Password: <input type="password" name="" id="password">
+    <div id="message2"></div>
+    <input type="button" value="Login" onclick="validate()"/>
+</body>
+</html>
