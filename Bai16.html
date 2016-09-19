@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM HTML trong Javascript</title>
+</head>
+<body>
+    <script language="javascript">
+        function get_content() {
+            var html = document.getElementById("content").innerHTML;
+            alert("Nội dung cần lấy là: " + html);
+        }
+        function set_content() {
+            document.getElementById("content").innerHTML = "<h1><i>Nội dung đã được thay đổi</i></h1>"
+        }
+
+        function changetype() {
+            var click = document.getElementById("btnclick");
+            var type = click.type;
+
+            if (type == "button") {
+                click.type = "text";
+            } else {
+                click.type = "button";
+            }
+        }
+    </script>
+    <div id="content"> Đây là nội dung. </div>
+    <input type="button" value="Lấy nội dung" onclick="get_content()" />
+    <input type="button" value="Đổi nội dung" onclick="set_content()" />
+    <hr />
+    Ví dụ 2: Chuyển button thành text, text thành button
+    <input type="button" id="btnclick" value="Click" onclick="changetype()" />
+</body>
+</html>

@@ -1,6 +1,0 @@
-c:\users\admin\documents\visual studio 2013\Projects\ThucHanhJS\ThucHanhJS\bin\ThucHanhJS.dll.config
-c:\users\admin\documents\visual studio 2013\Projects\ThucHanhJS\ThucHanhJS\bin\ThucHanhJS.dll
-c:\users\admin\documents\visual studio 2013\Projects\ThucHanhJS\ThucHanhJS\bin\ThucHanhJS.pdb
-c:\users\admin\documents\visual studio 2013\Projects\ThucHanhJS\ThucHanhJS\obj\Debug\ThucHanhJS.dll
-c:\users\admin\documents\visual studio 2013\Projects\ThucHanhJS\ThucHanhJS\obj\Debug\ThucHanhJS.pdb
-c:\users\admin\documents\visual studio 2013\Projects\ThucHanhJS\ThucHanhJS\obj\Debug\ThucHanhJS.csprojResolveAssemblyReference.cache
