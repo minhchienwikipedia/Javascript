@@ -1,9 +1,44 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title></title>
+    <title>Events trong Javascript</title>
 </head>
 <body>
+    <script language="javascript">
+        function validate() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var repassword = document.getElementById("re-password").value;
 
+            // check giá trị
+            if (username == "") {
+                alert("Bạn chưa nhập tên đăng nhập");
+                return false;
+            }
+            if (password == "") {
+                alert("Bạn chưa nhập mật khẩu");
+                return false;
+            }
+            if (repassword == "") {
+                alert("Bạn chưa nhập lại mật khẩu");
+                return false;
+            }
+            if (repassword != "") {
+                if (repassword != password) {
+                    alert("Bạn nhập lại mật khẩu không đúng");
+                    return false;
+                }
+            }
+            return true;
+
+
+        }
+    </script>
+    <form method="post" action="">
+        Username: <input type="text" id="username" value="" /> <br />
+        Password: <input type="password" id="password" value="" /> <br />
+        Re Password: <input type="password" value="" id="re-password" /><br />
+        <input type="submit" value="Register" onclick="return validate()" />
+    </form>
 </body>
 </html>
