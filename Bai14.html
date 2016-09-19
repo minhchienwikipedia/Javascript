@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sự kiện (Event) trong Javascript</title>
+</head>
+<body>
+    <input type="text" value="" id="message" onkeyup="show_result()" />
+    <div id="result"></div>
+    <script language="javascript">
+        function show_result() {
+            var message = document.getElementById("message");
+            var result = document.getElementById("result");
+
+            result.innerHTML = message.value;
+        }
+        
+    </script>
+
+    <hr />
+
+       <script language="javascript">   
+           function tinhtong() {
+               var a, b;
+               a = document.getElementById("a");
+               b = document.getElementById("b");
+               var ketqua = document.getElementById("ketqua");
+
+               var tong = parseInt(a.value) + parseInt(b.value);
+
+               if (!isNaN(tong)) {
+                   ketqua.value = tong;
+               }
+           }
+       </script>
+    số a: <input type="text" id="a" value="" onkeyup="tinhtong()" />
+    số b: <input type="text" id="b" value="" onkeyup="tinhtong()" />
+    tổng là: <input type="text" id="ketqua" value="" />
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>DOM Element trong javascript</title>
+</head>
+<body>
+    <input type="text" value="thẻ không cần lấy" class="website" />
+    <div>
+        <input id="Name" type="text" value="Hello world" class="hello" />
+        <input type="text" value="thẻ không cần lấy" class="website" />
+    </div>
+        <script language="javascript">
+
+            // lấy theo ID
+            //var element = document.getElementById("Name");
+            //document.write(element.value);
+
+            //lấy theo Thẻ tag
+            //var element = document.getElementsByTagName("input");
+            //document.write(element[0].value);
+
+            //lấy theo class
+            //var element = document.getElementsByClassName("hello");
+            //document.write(element[0].value);
+
+            //lấy theo  Selector CSS
+            var element = document.querySelectorAll("div input.hello");
+            document.write(element[0].value);
+
+        </script>
+</body>
+</html>

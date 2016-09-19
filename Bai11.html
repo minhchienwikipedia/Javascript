@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Các hàm xử lý mảng trong javascript</title>
+</head>
+<body>
+    <script language="javascript">
+        var mang = ["chien", "nam", "minh", "hang", "hoang"];
+        //in mảng
+        //document.write(mang.join());
+        document.write(mang.valueOf());
+        document.write("<br/>");
+
+        // thêm vào cuối mảng và in
+        mang.push("Đường");
+        document.write(mang.join());
+        document.write("<br/>");
+
+        // thêm vào đầu mảng và in
+        mang.unshift("Đường");
+        document.write(mang.join());
+        document.write("<br/>");
+
+        //xóa phần tử cuối cùng và in
+        mang.pop();
+        document.write(mang.valueOf());
+        document.write("<br/>");
+
+        //xóa phần tử đầu tiên và in
+        mang.shift();
+        document.write(mang.valueOf());
+        document.write("<br/>");
+
+        //Hàm splice() có ba tham số truyền vào như sau: splice(position_add, num_element_remove, value1, value2, ...).
+
+        //Trong đó:
+
+        //        position_add là vị trí sẽ thêm (vị trí đầu tiên là 0)
+        //num_element_remove là số phần tử sẽ xóa (bắt đầu từ position_add)
+        //value1, value2, .. là danh sách các phần tử sẽ được thêm vào sau khi tại vị trí position_add và sau khi remove num_element_remove phần tử.
+
+        mang.splice(1, 2, 'Thêm a', 'Thêm b');
+        document.write(mang.valueOf());
+        document.write("<br/>");
+
+        // Sắp xếp lại
+        mang.sort();
+        document.write(mang.valueOf());
+    </script>
+</body>
+</html>
