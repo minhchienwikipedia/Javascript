@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sự kiện onload trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		// hàm do_validate() bên trong  sự kiện window.onload nên mặc dù hàm validate được đặt phía dưới nhưng vẫn đúng.
+		// window.onload = function () {
+		// 	do_validate();
+		// }
+
+		// function do_validate(){
+		// 	alert(1);
+		// }
+
+		// ---------------------------------------
+
+		alert(1);
+		window.onload = function(){
+			alert(3);
+		}
+		alert(2);
+	</script>
+</body>
+</html>
