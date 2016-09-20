@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Thêm sự kiện (Event) bằng Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<ul>
+        <li><a href="#" class="show">Tin công nghệ</a></li>
+        <li><a href="#">Tin trong nước</a></li>
+        <li><a href="#" class="show">Tin thời sự</a></li>
+    </ul>  
+    <script type="text/javascript">
+    	var list = document.getElementsByClassName('show');
+    	
+    	for(var i=0; i< list.length;i++)
+    	{
+    		list[i].onclick = function()
+    		{
+    			alert('Xin chào, bạn vừa click');
+    			return false;
+    		}
+    		
+    	}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hàm addEventListener() trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<!-- Thêm sự kiện vào đối tượng html -->
+	<input type="text" id="txtinput" value="">
+	<div id="result"></div>
+	<script type="text/javascript">
+		var input = document.getElementById("txtinput");
+
+		input.addEventListener('keyup',function(){
+			document.getElementById("result").innerHTML = input.value;
+		});
+
+		input.addEventListener('keyup',function () {
+			if(input.value.length>5){
+				alert("Bạn đã nhập quá 5 kí tự");
+			}
+		});
+	</script>
+	<!-- Thêm sự kiện vào đối tượng window -->
+	<hr>
+	Bạn hãy zoom trình duyệt.!
+	<div id="result2"></div>
+	<script type="text/javascript">
+		window.addEventListener('resize',function(){
+			document.getElementById("result2").innerHTML = "<h2>Bạn vừa zoom trình duyệt</h2>";
+		});
+	</script>
+
+	<!-- Nếu bạn muốn truyền tham số vào thì bắt buộc bạn phải tạo một hàm khác rồi gọi nó từ hàm addEventListener(). -->
+</body>
+</html>
