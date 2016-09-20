@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM Nodes trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	1. DOM Node - document.createElement() <br>
+	<script type="text/javascript">
+		var p = document.createElement("p");
+		p.innerHTML = "Xin chào các bạn";
+		document.getElementsByTagName("body")[0].appendChild(p);
+
+	</script>
+	2. DOM Node - document.createTextNode() <br>
+	<script type="text/javascript">
+		var p = document.createElement("p");
+		var text = document.createTextNode("Xin chào mọi người");
+		p.appendChild(text);
+		document.getElementsByTagName('body')[0].appendChild(p);
+	</script>
+	3. DOM Node - các phương thức khác <br>
+	<div id="content">
+		<h5>Xin chào các bạn! </h5>
+		<h5>Chào mừng bạn đến với website</h5>
+	</div>
+	
+	<input type="button" id="btnAdd" value="Add"> <br>
+	<script type="text/javascript">
+		var btnAdd = document.getElementById("btnAdd");
+		btnAdd.addEventListener("click",function(){
+			var h1 = document.createElement("h1");
+			h1.innerHTML = "Bạn đã add thêm đối tượng";
+			var element = document.getElementById('content');
+			var element_child = document.getElementsByTagName("h5")[1];
+			element.insertBefore(h1,element_child);
+		});
+	</script>
+	- Xóa một node  <br>
+	<input type="button" id="btnRemove" value="Remove"> <br>
+	<script type="text/javascript">
+		var btnRemove = document.getElementById("btnRemove");
+		btnRemove.addEventListener("click",function(){
+			var need_move = document.getElementsByTagName('h5')[0];
+
+			document.getElementById('content').removeChild(need_move);
+		});
+	</script>
+	- Thay thế một node <br>
+	<input type="button" id="btnReplace" value="Replace"> <br>
+	<script type="text/javascript">
+		var btnReplace = document.getElementById("btnReplace");
+		btnReplace.addEventListener("click",function(){
+			var p = document.createElement("h1");
+			p.innerHTML = "Xin chào";
+			var replace = document.getElementsByTagName('h5')[0];
+			document.getElementById("content").replaceChild(p,replace);
+		});
+	</script>
+</body>
+</html>

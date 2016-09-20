@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM - Window trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	1. Xác định kích thước của trình duyệt <br>
+	<script type="text/javascript">
+		var width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+		var height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+		document.write("Trình duyệt có chiều rộng là: " + width + "<br/>");
+		document.write("Trình duyệt có chiều cao là: " + height + "<br/>");
+	</script>
+	2. Thao tác với một cửa sổ window <br>
+	<script type="text/javascript">
+		var windowChild = null;
+		function openWindow() {
+			windowChild = window.open("#","windowChild","500","500");
+
+			return false;
+			
+		}
+
+		function closeWindow()
+        {
+            windowChild.close()
+            return false;
+        }
+        // function moveWindow()
+        // {
+        //     windowChild.moveTo(500, 100);
+        //     windowChild.focus();
+        //     return false;
+        // }
+        // function resizeWindow()
+        // {
+        //     windowChild.resizeTo(1000, 1000);
+        //     windowChild.focus();
+        //     return false;
+        // }
+	</script>
+	<a href="#" onclick="return openWindow()">Open</a>
+	<a href="#" onclick="return closeWindow()">Close</a>
+
+</body>
+</html>
