@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM - History trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="content"></div>
+	<input type="button" id="btnClick" value="Count History">
+	<input type="button" id="btnBack" value="Back">
+	<input type="button" id="btnForward" value="Forward">
+	<input type="button" id="btnBack5" value="Back to 5 History">
+	<script type="text/javascript">
+		var btnClick = document.getElementById("btnClick");
+		var btnBack = document.getElementById("btnBack");
+		var btnBack5 = document.getElementById("btnBack5");
+		var btnForward = document.getElementById("btnForward");
+
+		btnClick.addEventListener("click",function(){
+			alert("Tổng số trang đã lưu trong history là: " + window.history.length);
+		});
+		btnBack.addEventListener("click",function(){
+			window.history.back();
+		});
+		btnForward.addEventListener("click",function(){
+			window.history.forward();
+		});
+		btnBack5.addEventListener("click",function(){
+			window.history.go(-5);
+		});
+	</script>
+</body>
+</html>

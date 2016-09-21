@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM - Window Navigator trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		if (window.cookieEnabled){
+	    document.write("Có bật Cookie");
+	}
+	else{
+	    document.write("Cookie đã bị tắt");
+	    
+	}
+	</script>
+	<br>
+	<hr>
+	<script type="text/javascript">
+		document.write("App Name: "+ window.navigator.appName + "<br>");
+		document.write("App Code Name: "+ window.navigator.appCodeName + "<br>");
+		document.write("Engine: " + navigator.product + "<br>");
+		document.write("Version: " + navigator.appVersion + "<br/>");
+		document.write("Hệ điều hành: " + navigator.platform + "<br/>");
+		document.write("Ngôn ngữ Browser: " + navigator.language);
+	</script>
+</body>
+</html>

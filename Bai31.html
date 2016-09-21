@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOM - Location điều hướng và xử lý URL trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	 Chào mừng bạn đến với website
+      <button onclick="refreshPage()">Refresh</button>
+      <button onclick="replacePage()">Replace</button> 
+      <button onclick="hrefPage()">Href</button> 
+       
+      <script language="javascript">
+        function refreshPage()
+        {
+            window.location.reload(); 
+        }
+         function replacePage()
+        {
+          window.location.replace('http://booktour.pe.hu');  // Không đưa vào lịch sử
+        }
+        function hrefPage()
+        {
+          window.location.href = 'http://booktour.pe.hu'; // Có đưa vào lịch sử
+        }
+      </script>
+      <hr>
+      Các thuộc tính của Location <br>
+      <script language="javascript">
+        document.write("hash:" +window.location.hash + "<br/>");
+        document.write("host:" +window.location.host + "<br/>");
+        document.write("hostname:" +window.location.hostname + "<br/>");
+        document.write("href:" +window.location.href + "<br/>");
+        document.write("origin:" +window.location.origin + "<br/>");
+        document.write("pathname:" +window.location.pathname + "<br/>");
+        document.write("port:" +window.location.port + "<br/>");
+        document.write("search:" +window.location.search + "<br/>");
+      </script>
+</body>
+</html>
