@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hàm xử lý Number trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	Có các hàm xử lý Number là:
+	<ul>
+		<li>
+
+			Number(), nếu là chuỗi sẽ trả về NaN. <br>
+			<input type="button" value="Show" onclick="show(1)">
+			<div id="i1"></div>
+
+			
+		</li>
+
+		<li>
+			parseInt(), nếu là chuỗi có số ở đầu sẽ lấy số và bỏ chuỗi <br>
+			<input type="button" value="Show" onclick="show(2)">
+			<div id="i2"></div>
+			
+		</li>
+		<li>parseFloat(), đưa về dạng float<br>
+			<input type="button" value="Show" onclick="show(3)">
+			<div id="i3"></div>
+		</li>
+		<li>toString(), đưa sang string<br>
+			<input type="button" value="Show" onclick="show(4)">
+			<div id="i4"></div>
+		</li>
+		<li>valueOf(), lấy giá trị<br>
+			<input type="button" value="Show" onclick="show(5)">
+			<div id="i5"></div>
+		</li>
+		
+
+	</ul>
+	<div id="app"></div>
+	<script type="text/javascript">
+		var boolean_true = true;
+		Number(boolean_true);           // returns 1
+		 
+		var boolean_false = false;
+		Number(boolean_false);          // returns 0    
+		 
+		var string_str = 'website';
+		Number(string_str);             // returns NaN
+		 
+		var string_num = 100;
+		Number(string_num); // returns 100
+		 
+		var date = new Date();
+		Number(boolean_true);           // returns 1 
+
+		parseInt(boolean_true); // returns NaN
+		 
+
+		parseInt(boolean_false);// returns NaN
+		 
+		var string_str_num = '10 website';
+		parseInt(string_str_num);   // returns 10
+		
+		var string_str_float = '10.2website';
+
+		var i;
+		function show(i) {
+			
+			
+			
+			switch(i){
+				case 1: 
+					document.getElementById("i1").innerHTML = "Value: " +string_str + "<br>" + " Return: " + Number(string_str);
+					break;
+				case 2:
+					document.getElementById("i2").innerHTML = "Value: " + string_str_num  + "<br>" + " Return: " + parseInt(string_str_num);
+					break;
+				case 3:
+					document.getElementById("i3").innerHTML = "Value: " + string_str_float  + "<br>" + " Return: " + parseFloat(string_str_float);
+					break;
+				case 4:
+					document.getElementById("i4").innerHTML = "Value: " + string_num  + "<br>" + "Type: " + typeof string_num  + "<br>" + " Return: " + string_num.toString() ;
+					break;
+				case 5:
+					document.getElementById("i5").innerHTML = "Value: " + string_str  + "<br>" + " Return: " + string_str.valueOf();
+					break;
+
+			}
+			
+		}
+	</script>
+</body>
+</html>

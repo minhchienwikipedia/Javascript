@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hàm xử lý ngày tháng (Date) trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body onload="start()">
+
+
+	 Clock: <div id="clock"></div>
+
+	 <script type="text/javascript">
+	 	
+
+		 function start() {
+	 		var d = new Date();
+		 	var h = d.getHours();
+		 	var m = d.getMinutes();
+		 	var s = d.getSeconds();
+
+		 	m = checktime(m);
+		 	s = checktime(s);
+
+		 	document.getElementById("clock").innerHTML = h + ":" + m + ":" + s;
+
+		 	var t = setTimeout(function() {
+		 		start();
+		 	}, 500);
+	 	}
+
+	 	function checktime(i){
+	 		if(i<10){
+	 			i = "0" + i;
+	 		}
+	 		return i;
+	 	}
+	 </script>
+	 <hr>
+
+	<script language="javascript">
+    
+    // Object Date now
+    var d = new Date();
+
+    // d.setDate(20);
+    // d.setFullYear(2011);
+    // d.setHours(2);
+    // d.setMilliseconds(2);
+    // d.setMinutes(3);
+    // d.setMonth(4);
+    // d.setSeconds(5);
+    
+    document.write( "getDate: " + d.getDate()      + "<br/>");
+    document.write("getDay: " + d.getDay()       + "<br/>");
+    document.write("getFullYear: " + d.getFullYear()  + "<br/>");
+    document.write("getYear: " + d.getYear()      + "<br/>");
+    document.write("getHours: " + d.getHours()     + "<br/>");
+    document.write("getMilliseconds: " + d.getMilliseconds() + "<br/>");
+    document.write("getMinutes: " + d.getMinutes()   + "<br/>");
+    document.write("getMonth: " + d.getMonth()     + "<br/>");
+    document.write("getSeconds: " + d.getSeconds()   + "<br/>");
+    document.write("getTime: " + d.getTime()      + "<br/>");
+
+
+    
+	</script>
+
+</body>
+</html>

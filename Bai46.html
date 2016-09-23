@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Use Strict là gì? Strict Mode trong javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	Use strict là từ khóa khai báo sử dụng chế độ Strict Mode, nghĩa là nếu bạn muốn sử dụng chế độ Strict Mode ở đâu thì chỉ việc đặt từ khóa "use strict" ở đó. Chế độ Strict Mode có hai phạm vi sử dụng đó là toàn cục và cục bộ. Nó giúp thông báo lỗi khi sử dụng biến chưa khai báo hay thiếu dấu chấm phảy cuối mỗi dòng lệnh, khai báo biến trùng nhau, khai báo biến trùng lệnh.
+	<script type="text/javascript">
+		"use strict"; // NOT Hoisting;
+		// Đoạn code này lỗi vì biến domain chưa được khởi tạo
+		domain = "http://booktour.pe.hu";
+		 
+		// In ra màn hình
+		document.write(domain);
+	</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RegExp - Regular Expression trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+
+	String: <input type="text" value="" id="txtString"> <br> <br>
+	<script type="text/javascript">
+			var txtString = document.getElementById("txtString");
+			
+			function check(i){
+				if(i==1){
+					if(/\d/.test(txtString.value)){
+
+					document.getElementById("app").innerHTML = "Yes";
+					}else{
+						document.getElementById("app").innerHTML = "No";
+
+					}
+				}
+				if(i==2){
+					if(/\s/.test(txtString.value)){
+
+					document.getElementById("app").innerHTML = "Yes";
+					}else{
+						document.getElementById("app").innerHTML = "No";
+
+					}
+				}
+				if(i==3){
+					if(/[a-z]/.test(txtString.value)){
+
+					document.getElementById("app").innerHTML = "Yes";
+					}else{
+						document.getElementById("app").innerHTML = "No";
+
+					}
+				}
+				
+			}
+			
+		</script>
+	
+	
+	<input type="button" value="Check Number" onclick="check(1)"> 
+	<input type="button" value="Check Space"  onclick="check(2)">
+	<input type="button" value="Check String" onclick="check(3)">
+	<div id="app"></div>
+	
+</body>
+</html>

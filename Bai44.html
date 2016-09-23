@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lệnh switch case trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="button" value="Check" id="btnTry" onclick="tryagain()" >
+	<div id="app"></div>
+	<script type="text/javascript">
+		var color = null;
+	 	function tryagain() {
+	 		color = prompt("Enter the color should check");
+	 		switch (color){
+		    case 'red' : 
+		    case 'yellow' : 
+		    case 'blue' : 
+		        document.getElementById("app").innerHTML = "You write " + color + ".!";
+		        break; 
+		     case null: 
+		        document.getElementById("app").innerHTML = "";
+		        break; 
+		    default :
+		        document.getElementById("app").innerHTML = "Color not in program";
+
+			}
+	 	}
+		
+	</script>
+	
+</body>
+</html>

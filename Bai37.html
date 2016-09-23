@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chuỗi (string) trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	Nối chuỗi <br>
+
+	<input type="text" value="" id="txtValue">
+	<div id="app"></div>
+	Thay đổi thuộc tính chuỗi<br>
+	(Show code)
+	<script type="text/javascript">
+		var txtValue = document.getElementById("txtValue");
+		txtValue.addEventListener('keyup', function(){
+			document.getElementById("app").innerHTML = "Hello " + txtValue.value;
+		});
+		var number = 12;
+		alert(typeof number);
+		 
+		
+		number = number.toString();
+		alert(typeof number);
+		
+	</script>
+</body>
+</html>

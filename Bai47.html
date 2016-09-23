@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đối tượng (object) trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<img src="img/Bai47.png">
+	<script type="text/javascript">
+		var Comment = {
+		    info : {
+		        title : "This is title",
+		        content : "This is content",
+		        email : "This is email",
+		        fullname : "This is fullname"
+		    },
+		    func: {
+		    	addComment : function(){
+           			 Comment.info.fullname = "FULL NAME";
+		        },
+		        validateComment : function(){
+		            // Something
+		        }
+		    }
+		};
+		Comment.func.addComment();
+		 console.log(Comment);
+		 console.log(Comment.info.fullname);
+	</script>
+</body>
+</html>

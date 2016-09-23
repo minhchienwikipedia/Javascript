@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Javascript Object Prototypes</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		function Person(){
+			this.name = "";
+			this.email = "";
+			this.adress = "";
+			this.ShowInfo = function () {
+				document.write("Name: " + this.name + "<br>");
+				document.write("Email: " + this.email + "<br>");
+				document.write("Adress: " + this.adress + "<br>");
+			}
+		}
+
+		Person.prototype.gender = "";
+		Person.prototype.showGender = function(){
+		  document.write("Gender: " + this.gender);  
+		};
+
+		var Chien = new Person();
+		Chien.name = "Duong Minh Chien";
+		Chien.email = "minhchienwikipedia@gmail.com";
+		Chien.adress = "Vinh Phuc";
+		Chien.gender = "Male";
+		Chien.ShowInfo();
+		Chien.showGender();
+	</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Các hàm xử lý chuỗi trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="app"></div>
+	<script type="text/javascript">
+		var string  = "Welcome to Website.!";
+		document.getElementById("app").innerHTML = string;
+		document.write("Positions appear string 'Website': "+ string.indexOf("Website") + "<br>")  ;
+		document.write("Cut String: "+ string.slice(8,14)+ "<br>");
+		document.write("Cut String: "+ string.slice(4)+ "<br/>");
+		document.write("UpperCase: " + string.toUpperCase() + "<br/>");
+		document.write("LowerCase: " + string.toLowerCase() + "<br/>");
+		document.write("Replace: " + string.replace("Welcome","Website"));
+	</script>
+</body>
+</html>

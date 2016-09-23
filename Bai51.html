@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bảng biểu thức Regular Expression trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<h3 id="goto-h3-0">Modifiers</h3>
+	<table border="1" cellpadding="1" cellspacing="1" class="bordered" style="width: 70%;">
+	<thead>
+		<tr width="100px">
+			<th scope="col">Modifier</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>i</td>
+			<td>So sánh không phân biệt chữ hoa chữ thường (case-insensitive)</td>
+		</tr>
+		<tr>
+			<td>g</td>
+			<td>So sánh toàn bộ chuỗi dù trong chuỗi có xuống hàng (global)</td>
+		</tr>
+		<tr>
+			<td>m</td>
+			<td>So sánh nhiều dòng (<span style="line-height: 20.7999992370605px;">multiline</span>)</td>
+		</tr>
+	</tbody>
+	</table>
+	<h3 id="goto-h3-1">Brackets</h3>
+	<table border="1" cellpadding="1" cellspacing="1" class="bordered" style="width: 70%;">
+	<thead>
+		<tr>
+			<th scope="col">Expression</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>[abc]</td>
+			<td>Tìm các ký tự a, b hoặc c</td>
+		</tr>
+		<tr>
+			<td>[^abc]</td>
+			<td>Tìm các ký tự không phải a, b và c</td>
+		</tr>
+		<tr>
+			<td>[0-9]</td>
+			<td>Tìm các ký tự là chữ số từ 0-9</td>
+		</tr>
+		<tr>
+			<td>[^0-9]</td>
+			<td>Tìm các ký tự không phải chữ số từ 0-9</td>
+		</tr>
+		<tr>
+			<td>(x|y)</td>
+			<td>Tìm ký tự x hoặc y</td>
+		</tr>
+	</tbody>
+</table>
+<h3 id="goto-h3-2">Metacharacters</h3>
+<table border="1" cellpadding="1" cellspacing="1" class="bordered" style="width: 70%;">
+	<thead>
+		<tr>
+			<th scope="col">Expression</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>.</td>
+			<td>Tìm ký tự bất kì</td>
+		</tr>
+		<tr>
+			<td>\w</td>
+			<td>Tìm ký tự chữ cái</td>
+		</tr>
+		<tr>
+			<td>\W</td>
+			<td>Tìm các ký tự không phải là chữ cái</td>
+		</tr>
+		<tr>
+			<td>\d</td>
+			<td>Tìm ký tự là chữ số</td>
+		</tr>
+		<tr>
+			<td>\D</td>
+			<td>Tìm ký tự không phải là chữ số</td>
+		</tr>
+		<tr>
+			<td>\s</td>
+			<td>Tìm ký tự là khoảng trắng</td>
+		</tr>
+		<tr>
+			<td>\S</td>
+			<td>Tìm ký tự không phải khoảng trắng</td>
+		</tr>
+		<tr>
+			<td>\b</td>
+			<td>Tìm so khớp bắt đầu hoặc kết thúc chuỗi</td>
+		</tr>
+		<tr>
+			<td>\B</td>
+			<td><span style="line-height: 20.7999992370605px;">Tìm so khớp không phải bắt đầu hoặc kết thúc chuỗi</span></td>
+		</tr>
+		<tr>
+			<td>\0</td>
+			<td>Tìm ký tự NULL</td>
+		</tr>
+		<tr>
+			<td>\n</td>
+			<td>Tìm ký tự xuống hàng</td>
+		</tr>
+		<tr>
+			<td>\t</td>
+			<td>Tìm ký tự tab</td>
+		</tr>
+	</tbody>
+</table>
+	<h3 id="goto-h3-2">Metacharacters</h3>
+	<table border="1" cellpadding="1" cellspacing="1" class="bordered" style="width: 70%;">
+	<thead>
+		<tr>
+			<th scope="col">Expression</th>
+			<th scope="col">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>+</td>
+			<td>Kiểm tra ký tự xuất hiện một hoặc nhiều lần</td>
+		</tr>
+		<tr>
+			<td>*</td>
+			<td>Kiểm tra ký tự&nbsp;xuất hiện không hoặc nhiều lần</td>
+		</tr>
+		<tr>
+			<td>?</td>
+			<td>Kiểm tra ký tự&nbsp;xuất hiện không hoặc một lần</td>
+		</tr>
+		<tr>
+			<td>{X}</td>
+			<td>Kiểm tra ký tự&nbsp;xuất hiện đúng X lần</td>
+		</tr>
+		<tr>
+			<td>{X,Y}</td>
+			<td>Kiểm tra ký tự xuất hiện tối thiểu X lần và tối đa Y lần</td>
+		</tr>
+		<tr>
+			<td>{X,}</td>
+			<td>Kiểm tra ký tự&nbsp;xuất hiện ít nhất X lần</td>
+		</tr>
+		<tr>
+			<td>^</td>
+			<td>Kiểm tra ký tự&nbsp;bắt đầu chuỗi</td>
+		</tr>
+		<tr>
+			<td>$</td>
+			<td>Kiểm tra ký tự&nbsp;kết thúc chuỗi</td>
+		</tr>
+	</tbody>
+</table>
+</body>
+</html>

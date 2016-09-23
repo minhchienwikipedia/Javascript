@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tìm hiểu JavaScript Hoisting</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script type="text/javascript">
+		// Gán nhưng chưa khai báo biến
+		domain = 'http://booktour.pe.hu';
+		 
+		// In giá trị
+		document.write("Domain: " + domain + " - undefined");
+		 
+		// Khai báo
+		var domain;
+		 
+		// In lại
+		document.write("<br/> Domain: " + domain);
+
+		document.write("<br/> Email: " + email);
+ 
+		var email = 'minhchienwikipedia@gail.com';
+	</script>
+</body>
+</html>

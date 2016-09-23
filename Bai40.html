@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Đối tượng Number trong Javascript</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<input type="text" id="txtValue" value="" onkeyup="show()" >
+	<div id="app"></div>
+	<input type="button" value="Convert to String" id="convert" onclick="convert()">
+	<script type="text/javascript">
+		var txtValue = document.getElementById("txtValue");
+		txtValue = parseInt(txtValue);
+		function show() {
+			
+				document.getElementById("app").innerHTML = "Auto convert to Number" + "<br>" + "Type: " + typeof txtValue;
+			
+		}
+			
+		function convert() {
+			
+			txtValue = txtValue.toString();
+			document.getElementById("app").innerHTML = "Type: " + typeof txtValue;
+			
+		}
+		
+
+	</script>
+</body>
+</html>
