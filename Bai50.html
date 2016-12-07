@@ -30,7 +30,7 @@
 					}
 				}
 				if(i==3){
-					if(/[a-z]/.test(txtString.value)){
+					if(/[一-龠]+|[ぁ-ゔ]+|[ァ-ヴー]+|[a-zA-Z]+|[ａ-ｚＡ-Ｚ]+[々〆〤]/.test(txtString.value) || txtString.value != " "){
 
 					document.getElementById("app").innerHTML = "Yes";
 					}else{

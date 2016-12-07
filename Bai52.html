@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regex check email - phone (VN) </title>
+</head>
+<body>
+
+	Email: <input type="text" id="txtEmail" value="">
+	<input type="button" value="Check" id="btnCheck" onclick="check(1)">
+	Phone: <input type="text" id="txtPhone" value="">
+	<input type="button" value="Check" id="btnCheck" onclick="check(2)">
+	<div id="app"></div>
+	<script type="text/javascript">
+		var txtEmail = document.getElementById('txtEmail');
+		var txtPhone = document.getElementById('txtPhone');
+		var btnCheck = document.getElementById('btnCheck');
+		function isEmailAddress(str) {
+		   var pattern =/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		   return pattern.test(str); 
+		}
+		function isEmailAddress2(str2) {
+		   var pattern2 = /^([a-zA-Z0-9_\.\-])+\+([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		   return pattern2.test(str2); 
+		}
+
+		var number;
+		function check(number){
+			if(number==1){
+				if(isEmailAddress(txtEmail.value) || isEmailAddress2(txtEmail.value)){
+					document.getElementById('app').innerHTML = "This is a Email";
+				}else{
+
+					document.getElementById('app').innerHTML = "This is NOT a Email";
+				}
+			}if(number==2){
+				var phone = parseInt(txtPhone.value);
+				if(isNaN(txtPhone.value)==false && phone.toString().length<=12){
+					document.getElementById('app').innerHTML = "This is a Phone Number";
+					
+				}else{
+
+					document.getElementById('app').innerHTML = "This is NOT a Phone Number";
+					
+				}
+			}
+			
+		}
+	</script>
+</body>
+</html>
